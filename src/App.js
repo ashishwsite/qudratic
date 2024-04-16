@@ -37,15 +37,15 @@ function App() {
             <form className="my-3">
                 <div className="mb-3">
                     <label htmlFor="a" className="form-label">cofficent of X^2 (a) </label>
-                    <input type="number" className="form-control" id="a" name="a" aria-describedby="emailHelp" value={coff.a} onChange={onChange}  /> 
+                    <input type="text" className="form-control" id="a" name="a" aria-describedby="emailHelp" value={coff.a} onChange={onChange}  /> 
                 </div>
                 <div className="mb-3">
                     <label htmlFor="b" className="form-label">cofficent of X (b) </label>
-                    <input type="number" min="-999999" className="form-control" id="b" name="b" value={coff.b} onChange={onChange}  />
+                    <input type="text"  className="form-control" id="b" name="b" value={coff.b} onChange={onChange}  />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="c" className="form-label">constant term (c) </label>
-                    <input type="number" min="-999999" className="form-control" id="c" name="c" value={coff.c} onChange={onChange}  />
+                    <input type="text" className="form-control" id="c" name="c" value={coff.c} onChange={onChange}  />
                 </div>
                 <button  type="submit" className="btn btn-primary" onClick={handleClick}>GetAns</button>
             </form>
