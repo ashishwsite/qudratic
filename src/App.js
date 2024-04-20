@@ -18,14 +18,14 @@ function App() {
             var b1=Number(p2);
             var c1=Number(p3);
             if((a1===0 && b1===0 && c1===0) || (a1===0 && b1===0)){
-                setmess("please provide valid  coffient ")
+                setmess("Provide valid  coffient ")
                 return ;
             }
             var nb=b1;
             if(b1<0) nb=(-1)*b1;
             var nc=c1;
             if(c1<0) nc=(-1)*c1;
-            var eq = `eqation: ${a1}x²${ b1<0 ? "-":"+"}${nb}x${c1<0 ? "-":"+"}${nc}=0`
+            var eq = `Eqation: ${a1}x²${ b1<0 ? "-":"+"}${nb}x${c1<0 ? "-":"+"}${nc}=0`
             console.log(eq)
             setmess(`${eq}`)
 
@@ -38,7 +38,7 @@ function App() {
             var b1=Number(p2);
             var c1=Number(p3);
             if((a1===0 && b1===0 && c1===0) || (a1===0 && b1===0)){
-                setmess("please provide valid  coffient ")
+                setmess(" Provide valid  coffient ")
                 return ;
             }
     // finding b^2-4ac
@@ -54,7 +54,7 @@ function App() {
             console.log("a <0 ")
             var root1=`[${b1}+(i\u221A ${descriment*(-1)})/${2*a1}`
            var  root2=`[${b1}-(i\u221A ${descriment*(-1)})]/${2*a1}`
-            setmess(` imaginary root are \n\n ${root1}  and  ${root2}`);
+            setmess(` Imaginary root are \n\n ${root1}  and  ${root2}`);
             return ;
            }
            else{
@@ -62,14 +62,14 @@ function App() {
                 console.log("a >0 and b<0 ")
              var    root1=`[${b1*(-1)}+ (i\u221A${descriment*(-1)})]/${2*a1}`
              var  root2=`[${b1*(-1)}-(i\u221A ${descriment*(-1)})]/${2*a1}`
-            setmess(` imaginary root are \n\n ${root1}  and  ${root2}`); return 
+            setmess(` Imaginary root are \n\n ${root1}  and  ${root2}`); return 
             }
             else{
                 console.log("a>0 and b> 0")
                var  rt1=`[-${b1}+(i\u221A${descriment*(-1)})]/${2*a1}`
                console.log(rt1)
                var rt2=`[-${b1}-(i\u221A${descriment*(-1)})]/${2*a1}`
-              setmess(`imaginary root are \n\n  ${rt1}  and  ${rt2}`); 
+              setmess(`Imaginary root are \n\n  ${rt1}  and  ${rt2}`); 
               return 
             }
            }
@@ -81,7 +81,7 @@ function App() {
         var root1=((-1)*b1 -rootdec)/denomerator;
         var root2=((-1)*b1 +rootdec)/denomerator;
       
-        setmess(`  root are : ${root1} and ${root2}`)
+        setmess(`  Root are : ${root1} and ${root2}`)
     
     }
     const nature=(p1,p2,p3)=>{
@@ -90,11 +90,11 @@ function App() {
         var b1=Number(p2);
         var c1=Number(p3);
         if((a1===0 && b1===0 && c1===0) || (a1===0 && b1===0)){
-            setmess("please provide valid  coffient ")
+            setmess("Provide valid  coffient ")
             return ;
         }
         if(a1===0) {
-            setmess("provide a valid quadratic eqation  ") 
+            setmess("Provide a valid quadratic eqation  ") 
             return ;
         }
         // critcl pt
@@ -104,7 +104,7 @@ function App() {
         }
         var crtval=((-1)*b1*a1 +2*a1*c1 -(b1)*(b1))/2*a1;
         console.log("crtvalu is ",crtval)
-        setmess(` optimal  point =>   ${crt}  \n\n optimal  value => ${crtval}`)
+        setmess(` Optimal  point =>   ${crt}  \n\n optimal  value => ${crtval}`)
 
     }
     return (
@@ -155,9 +155,10 @@ function App() {
                 </div >
                 {/* <button  type="submit"  className="btn btn-primary" onClick={handleClick}>GetAns</button> */}
                <div >
+               <button  onClick={() =>eqation(a1,b1,c1)} style={{cursor:'pointer',backgroundColor:'red',margin:'12px',padding:'2px',border:'solid 3px',borderRadius:'8px'}}>Eqaution</button>
                     <button  onClick={() =>rootshow(a1,b1,c1)} style={{cursor:'pointer',backgroundColor:'purple',margin:'12px',padding:'2px',border:'solid 3px',borderRadius:'8px'}}>Roots</button>
                     <button onClick={() =>nature(a1,b1,c1) } style={{cursor:'pointer',backgroundColor:'green',margin:'12px',padding:'2px',border:'solid 3px',borderRadius:'8px'}}>Optimal</button>
-                    <button  onClick={() =>eqation(a1,b1,c1)} style={{cursor:'pointer',backgroundColor:'red',margin:'12px',padding:'2px',border:'solid 3px',borderRadius:'8px'}}>Eqaution</button>
+                   
                     </div>
             </div>
            
